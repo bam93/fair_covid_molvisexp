@@ -1,7 +1,7 @@
 # FAIR sharing of molecular visualization experiences: data collection
 # (fair_covid_molvisexp)
 
-This is a data and code archive for our publication on biorxiv.
+This is a data and code archive in its version $Id$ for our publication on biorxiv.
 
 Contents
 -
