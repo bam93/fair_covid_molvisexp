@@ -9,15 +9,11 @@ This page is an inventory of all media, data and code examples related to our pu
 
 ## Code and executables
 
-* [UnityMol](http://unitymol.sourceforge.net) scripts and required files to reproduce the examples described in our paper 
-
-
- [![DOI](https://zenodo.org/badge/289968174.svg)](https://zenodo.org/badge/latestdoi/289968174)
- 
-
-* [UnityMol](http://unitymol.sourceforge.net) executable builds to run the above scripts (to come)
-
-* [UnityMol](http://unitymol.sourceforge.net) source code access (to come)
+Item  | Link 
+------------- | ------------- 
+[UnityMol](http://unitymol.sourceforge.net) scripts and required files to reproduce the examples described in our paper     | [![DOI](https://zenodo.org/badge/289968174.svg)](https://zenodo.org/badge/latestdoi/289968174) 
+[UnityMol](http://unitymol.sourceforge.net) executable builds to run the above scripts | (to come)
+[UnityMol](http://unitymol.sourceforge.net) source code access | (to come)
 
 
 ## Other data
