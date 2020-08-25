@@ -8,6 +8,7 @@ This page is an inventory of all media, data and code examples related to our pu
 Type | Description  | Link(s) 
 ------------- | ------------- | ------------- 
 Image | Five simple structural views of the SARS spike glycoprotein complex with human angiotensin-converting enzyme 2 (ACE2)  | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3999339.svg)](https://doi.org/10.5281/zenodo.3999339) [figshare](https://doi.org/10.6084/m9.figshare.12860024.v1)
+Movie | Animation of drug molecules binding to Covid-19 main protease | [![DOI](https://zenodo.org/badge/DOI/10.6084/m9.figshare.12860069.svg)](https://doi.org/10.6084/m9.figshare.12860069)
 
 
 ## Code and executables
