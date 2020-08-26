@@ -16,9 +16,10 @@ Movie | Animation of drug molecules binding to Covid-19 main protease | [![DOI](
 
 Item | Description | Link(s)
 ------------- | ------------- | ------------- 
-3D Model      | Google poly   | (to come)
+3D Model (fbx)     | A 3D model of the spike-ACE2 interaction exported from UnityMol. The raw fbx file can be downloaded, or the 3D model can be directly viewed on Google Poly or on Sketchfab. This also allows viewing in AR/VR with various devices   | [![DOI](https://zenodo.org/badge/DOI/10.6084/m9.figshare.12866981.v2.svg)](https://doi.org/10.6084/m9.figshare.12866981.v2) [Google_Poly](https://poly.google.com/view/5zsJiglTWbm) [Sketchfab](https://skfb.ly/6UFOw)
 3D Model      | Sketchfab   | (to come)
 Printable Model | 3D print exchange | (to come)
+
 
 ## Code and executables
 
