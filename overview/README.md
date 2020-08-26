@@ -37,6 +37,13 @@ Item  | Link
 ------------- | ------------- 
 Documentation on how to create the various media and models above with UnityMol | (to come)
 
+## Collections and communities
+
+Item | Link
+------------- | ------------- 
+Zenodo community incorporating all media, models, codes, executables etc. | [Zenodo](https://zenodo.org/communities/fair-molvisexp/)
+figshare collection incorporating all elements deposited via figshare | [Figshare](https://figshare.com/account/home#/collections/5101400)
+
 ## License
 
 The whole data collection including this file is under the CC-BY International license, see the `LICENSE` file for details.
