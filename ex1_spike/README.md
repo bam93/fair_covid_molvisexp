@@ -24,4 +24,17 @@ show glycosylation shield
 3) Zoom in on central helix conformational change
 -
 
+## Contents
 
+- `./`: in this top level directory are all the files to run the example in UnityMol
+- `images`: derived image media, either screen captures, renderings or exported images
+- `3dmodels`: derived 3D models, exported from UnityMol for use with eg Sketchfab etc.
+
+
+## License
+
+The whole data collection including this file is under the CC-BY International license, see the `LICENSE` file for details.
+
+## Contact
+
+For questions, bugs, suggestions, and further inquiries, please leave an issue here or send the corresponding author an email at baaden [at] smplinux [dot] de
