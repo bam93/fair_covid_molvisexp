@@ -1,7 +1,14 @@
 
 # FAIR sharing of molecular visualization experiences - overview
 
-This page is an inventory of all media, data and code examples related to our publication on [biorxiv](link to come) which lay the foundation for this Zenodo collection on FAIR sharing of molecular visualization experiences.
+This page is an inventory of all media, data, code examples and instructions related to our publication on [biorxiv](link to come) which lay the foundation for a Zenodo community and a figshare collection on FAIR sharing of molecular visualization experiences.
+
+## Collections and communities
+
+Item | Link
+------------- | ------------- 
+Zenodo community incorporating all media, models, codes, executables etc. | [Zenodo](https://zenodo.org/communities/fair-molvisexp/)
+figshare collection incorporating all elements deposited via figshare | [Figshare](https://figshare.com/account/home#/collections/5101400)
 
 ## Media
 
@@ -17,7 +24,7 @@ Movie | Animation of drug molecules binding to Covid-19 main protease | [![DOI](
 Item | Description | Link(s)
 ------------- | ------------- | ------------- 
 3D Model (fbx)     | A 3D model of the spike-ACE2 interaction exported from UnityMol. The raw fbx file can be downloaded, or the 3D model can be directly viewed on Google Poly or on Sketchfab. This also allows viewing in AR/VR with various devices   | [![DOI](https://zenodo.org/badge/DOI/10.6084/m9.figshare.12866981.v2.svg)](https://doi.org/10.6084/m9.figshare.12866981.v2) [Google_Poly](https://poly.google.com/view/5zsJiglTWbm) [Sketchfab](https://skfb.ly/6UFOw)
-Printable Model (stl) | A 3D model and related files for 3D printing of the SARS-CoV-2 main protease | [![DOI](https://zenodo.org/badge/DOI/10.6084/m9.figshare.12867314.svg)](https://doi.org/10.6084/m9.figshare.12867314) [NIH\_Print_Exchange](https://3dprint.nih.gov/discover/3DPX-014787)
+Printable Model (stl) | A 3D model and related files for 3D printing of the SARS-CoV-2 main protease monomer | [![DOI](https://zenodo.org/badge/DOI/10.6084/m9.figshare.12867314.svg)](https://doi.org/10.6084/m9.figshare.12867314) [NIH\_Print_Exchange](https://3dprint.nih.gov/discover/3DPX-014787)
 
 
 ## Code and executables
@@ -34,14 +41,7 @@ More executable builds to run the above scripts | (to come)
 
 Item  | Link 
 ------------- | ------------- 
-Documentation on how to create the various media and models above with UnityMol | (to come)
-
-## Collections and communities
-
-Item | Link
-------------- | ------------- 
-Zenodo community incorporating all media, models, codes, executables etc. | [Zenodo](https://zenodo.org/communities/fair-molvisexp/)
-figshare collection incorporating all elements deposited via figshare | [Figshare](https://figshare.com/account/home#/collections/5101400)
+Documentation on how to create the various media and models above with UnityMol | (to come once the code is stabilized)
 
 ## License
 
