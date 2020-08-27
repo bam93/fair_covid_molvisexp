@@ -131,6 +131,42 @@ def rep1():
     setRepSize("B.S1", "hb", 3.01)
     return;
 
+def rep1bis():
+    print("Representation of the overall ectodomain")
+    #showBoundingBox("6cs2")
+    select("6cs2 and chain A and resid 14:667", "A.S1", True, True, True, True, False, False, True)
+    showSelection("A.S1", "s")
+    colorSelection("A.S1", "s", bleu1)
+    
+    select("6cs2 and chain C and resid 14:667", "C.S1", True, True, True, True, False, False, True)
+    showSelection("C.S1", "s")
+    colorSelection("C.S1", "s", bleu3)
+    
+    select("6cs2 and chain A and resid 655:1177", "A.S2", True, True, True, True, False, False, True)
+    showSelection("A.S2", "s")
+    colorSelection("A.S2", "s", vert1)
+    
+    select("6cs2 and chain B and resid 655:1177", "B.S2", True, True, True, True, False, False, True)
+    showSelection("B.S2", "s")
+    colorSelection("B.S2", "s", vert2)
+    
+    select("6cs2 and chain C and resid 655:1177", "C.S2", True, True, True, True, False, False, True)
+    showSelection("C.S2", "s")
+    colorSelection("C.S2", "s", vert3)
+    
+    select("6cs2 and chain D", "D.ACE", True, True, True, True, False, False, True)
+    showSelection("D.ACE", "s")
+    colorSelection("D.ACE", "s", oran1)
+    
+    showSelection("6cs2_not_protein_nucleic", "s")
+    showSelection("6cs2_not_protein_nucleic", "s", SurfMethod.MSMS)
+    colorSelection("6cs2_not_protein_nucleic", "s", RGBA(1.0, 1.0, 0.0, 1.0))
+    
+    select("6cs2 and chain B and resid 14:667", "B.S1", True, True, True, True, False, False, True)
+    showSelection("B.S1", "s")
+    colorSelection("B.S1", "s", bleu2)
+    return;
+
 def rep1off():
     hideSelection("A.S1")
     hideSelection("A.S2")
@@ -271,4 +307,7 @@ if(doRT):
     viewrt2()
     reprt()
     APIPython.pythonConsole.doCoroutine(screenshotloop())
+
+# Command line to export scene for import in eg google poly
+#exportRepsToFBXFile("6cs2", "ex1_spike.fbx")
 
