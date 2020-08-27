@@ -15,6 +15,7 @@ figshare collection incorporating all elements deposited via figshare | [Figshar
 Type | Description  | Link(s) 
 ------------- | ------------- | ------------- 
 Image | Five simple structural views (still images) of the SARS spike glycoprotein complex with human angiotensin-converting enzyme 2 (ACE2)  | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3999339.svg)](https://doi.org/10.5281/zenodo.3999339) [figshare](https://doi.org/10.6084/m9.figshare.12860024.v1)
+Image | Screen captures illustrating molecular 3D model sharing through Sketchfab, Google Poly and NIH Print Exchange | [![DOI](https://zenodo.org/badge/DOI/10.6084/m9.figshare.12881606.svg)](https://doi.org/10.6084/m9.figshare.12881606)
 Movie | Animation of drug molecules binding to Covid-19 main protease | [![DOI](https://zenodo.org/badge/DOI/10.6084/m9.figshare.12860069.svg)](https://doi.org/10.6084/m9.figshare.12860069)
 360 movie | to come | to come
 3D movie | to come | to come
