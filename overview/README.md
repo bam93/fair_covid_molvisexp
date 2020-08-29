@@ -1,7 +1,7 @@
 
 # FAIR sharing of molecular visualization experiences - overview
 
-This page is an inventory of all media, data, code examples and instructions related to our preprint on [biorxiv](dx.doi.org/10.1101/2020.08.27.270140) which lay the foundation for a Zenodo community and a figshare collection on FAIR sharing of molecular visualization experiences.
+This page is an inventory of all media, data, code examples and instructions related to our preprint on [biorxiv](http://dx.doi.org/10.1101/2020.08.27.270140) which lay the foundation for a Zenodo community and a figshare collection on FAIR sharing of molecular visualization experiences.
 
 ## Collections and communities
 
