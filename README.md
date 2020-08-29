@@ -2,7 +2,7 @@
 
 # FAIR sharing of molecular visualization experiences
 
-This is a data and code collection (fair_covid_molvisexp) for our publication on [biorxiv](link to come) experimenting with FAIR sharing of molecular visualization experiences. We initially provide four example scripts for the [UnityMol](http://unitymol.sourceforge.net) software.
+This is a data and code collection (`fair_covid_molvisexp`) for our publication available as preprint on [biorxiv](dx.doi.org/10.1101/2020.08.27.270140) experimenting with FAIR sharing of molecular visualization experiences. We initially provide four example scripts for the [UnityMol](http://unitymol.sourceforge.net) software as well as derived media such as images, movies and 3D models.
 
 ## Contents
 
