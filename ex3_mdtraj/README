@@ -1,0 +1,89 @@
+                   sarscov2-10895671-bindingpaths Trajectory
+                              D. E. Shaw Research
+                                 April 02, 2020
+
+SARS-CoV-2 attachment to host cells is mediated by a protein-protein
+interaction between the receptor-binding domain (RBD) of the SARS-CoV-2
+spike and the human ACE2 receptor. We performed a 75 μs conventional
+MD simulation of a chimeric RBD in complex with ACE2 (PDB entry 6VW1)
+[REF1]. In the simulation the complex was stable, and no dissociation events
+were observed. We also performed preliminary accelerated weighted ensemble
+(AWE) [REF2] MD simulations of the complex, which facilitated sampling of
+hundreds of binding and thousands of unbinding events over an aggregate 30
+μs of AWE simulation. We provide below the conventional MD simulation,
+all ~415,000 conformations sampled during the AWE simulations, and the
+corresponding graph adjacency matrix with weights. From analysis of the AWE
+simulation data, we also provide four representative trajectories containing
+binding events and a free energy landscape estimated using a history-augmented
+Markov state model [REF3].
+
+The complex model was solvated in a ~140 Å box of 200 mM NaCl and water,
+and parameterized with the DES-Amber protein and ion force field [REF4], the
+TIP4P-D water model [REF5], and an in-house force field derived from GAFF
+[REF6]. Simulations were performed under the NPT ensemble at 300 K. During
+the AWE simulations, we used a 100.8 ps resampling interval to enhance the
+sampling of (i) the distance between the RBD and ACE2 centers of mass, (ii)
+the total number of atomic contacts between the RBD and ACE2, and (iii)
+the complex pRMSD (the square root of the product of the RMSD of the RBD
+after aligning on ACE2 and the RMSD of ACE2 after aligning on the RBD).
+
+
+REF1: Shang, J.; Ye, G.; Shi, K.; Wan, Y.; Luo, C.; Aihara, H.; Geng,
+  Q.; Auerbach, A.; Liet, F. Structural basis for receptor recognition by
+  the novel coronavirus from Wuhan. Research Square preprint 2020, DOI:
+  10.21203/rs.2.24749/v1.
+REF2: Abdul-Wahid, B.; Feng, H.; Rajan, D.; Costaouec, R.; Darve, E.;
+  Thain, D.; Izaguirre, J. A. AWE-WQ: fast-forwarding molecular dynamics
+  using the accelerated weighted ensemble. J. Chem. Inf. Model. 2014,
+  54(10), 3033–3043.
+REF3: Copperman, J.; Zuckerman, D. Accelerated estimation of long-timescale
+  kinetics by combining weighted ensemble simulation with Markov model
+  "microstates" using non-Markovian theory. 2019, arXiv:1903.04673.
+REF4:  Piana, S.; Robustelli, P.; Tan, D; Chen, S; Shaw, D. E. Development
+  of a force field for the simulation of single-chain proteins and
+  protein–protein complexes. J. Chem. Theory Comput. 2020, in press.
+REF5: Piana, S.; Donchev, A. G.; Robustelli, P.; Shaw, D. E. Water dispersion
+  interactions strongly influence simulated structural properties of disordered
+  protein states. J. Phys. Chem. B 2015, 119(16), 5113–5123.
+REF6: Wang, J.; Wolf, R. M.; Caldwell, J. W.; Kollman, P. A.;
+  Case, D. A. Development and testing of a general Amber force
+  field. J. Comput. Chem. 2004, 25(9), 1157–1174.
+
+License
+=======
+
+The trajectory dataset is released under a Creative Commons Attribution
+4.0 International Public License a copy of which is contained in the file
+CC4_License.txt provided in this distribution.
+
+Citation
+========
+
+The use of any trajectory data in any reports or publications of results
+obtained with the trajectory data should be acknowledged by including a
+citation to:
+
+  D. E. Shaw Research, "Molecular Dynamics Simulations Related to
+  SARS-CoV-2," D. E. Shaw Research Technical Data, 2020.
+  http://www.deshawresearch.com/resources_sarscov2.html/
+
+Viewing in VMD
+==============
+
+This trajectory may be viewed using the VMD version 1.8.7 or later (or
+any other tool capable of reading files in DCD and Maestro format).
+The VMD software is available from the Theoretical and Computational
+Biophysics Group at the University of Illinois at Urbana-Champaign,
+http://www.ks.uiuc.edu/Research/vmd
+
+  Humphrey, W., Dalke, A. and Schulten, K., "VMD - Visual Molecular
+  Dynamics", J. Molec. Graphics, 1996, vol. 14, pp. 33-38.
+
+To view the full trajectory, change to the unpacked trajectory directory
+and use the command:
+
+  $ vmd {TRAJECTORY}/*.mae {TRAJECTORY}/*.dcd
+
+Depending on the number of frames in the dataset, and the amount of memory
+on your system, you might need to pass only a subset of the DCD files on
+the command line.
