@@ -16,6 +16,7 @@ Type | Description  | Link(s)
 ------------- | ------------- | ------------- 
 Image | Five simple structural views (still images) of the SARS spike glycoprotein complex with human angiotensin-converting enzyme 2 (ACE2)  | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3999339.svg)](https://doi.org/10.5281/zenodo.3999339) [figshare](https://doi.org/10.6084/m9.figshare.12860024.v1)
 Image | Screen captures illustrating molecular 3D model sharing through Sketchfab, Google Poly and NIH Print Exchange | [![DOI](https://zenodo.org/badge/DOI/10.6084/m9.figshare.12881606.svg)](https://doi.org/10.6084/m9.figshare.12881606)
+Image | Screen captures illustrating example 4 (bioinformatics data mapping on a 3D structure) | [![DOI](https://zenodo.org/badge/DOI/10.6084/m9.figshare.12894077.svg)](https://doi.org/10.6084/m9.figshare.12894077)
 Movie | Animation of drug molecules binding to Covid-19 main protease | [![DOI](https://zenodo.org/badge/DOI/10.6084/m9.figshare.12860069.svg)](https://doi.org/10.6084/m9.figshare.12860069)
 360 Movie | UnityMol 360 degree video with a camera path through the COVID19 spike protein-ACE2 complex | [![DOI](https://zenodo.org/badge/DOI/10.6084/m9.figshare.12894038.svg)](https://doi.org/10.6084/m9.figshare.12894038) [youtube](https://www.youtube.com/watch?v=hFaPaypm6DI)
 3D movie | to come | to come
@@ -42,7 +43,7 @@ More executable builds to run the above scripts | (to come)
 
 Item  | Link 
 ------------- | ------------- 
-Preprint of the paper underlying this repository | [![DOI](https://zenodo.org/badge/DOI/10.6084/m9.figshare.12866804.svg)](https://doi.org/10.1101/2020.08.27.270140)
+Preprint of the paper underlying this repository available from biorxiv| [![DOI](https://zenodo.org/badge/DOI/10.1101/2020.08.27.270140.svg)](https://doi.org/10.1101/2020.08.27.270140)
 Documentation on how to create the various media and models above with UnityMol | (to come once the code is stabilized)
 
 ## License
