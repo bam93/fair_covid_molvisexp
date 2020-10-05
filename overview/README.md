@@ -35,6 +35,7 @@ Item  | Link
 ------------- | ------------- 
 [UnityMol](http://unitymol.sourceforge.net) scripts and required files to reproduce the examples described in our paper     | [![DOI](https://zenodo.org/badge/289968174.svg)](https://zenodo.org/badge/latestdoi/289968174) 
 [UnityMol](http://unitymol.sourceforge.net) 1.1.1 executable build for MacOSX to run the above scripts | [![DOI](https://zenodo.org/badge/DOI/10.6084/m9.figshare.12866804.svg)](https://doi.org/10.6084/m9.figshare.12866804)
+[UnityMol](http://unitymol.sourceforge.net) 1.1.1 executable build for Windows 64 to run the above scripts | [![DOI](https://zenodo.org/badge/DOI/10.6084/m9.figshare.13050770.svg)](https://doi.org/10.6084/m9.figshare.13050770)
 More executable builds to run the above scripts | (to come)
 [UnityMol](http://unitymol.sourceforge.net) source code release of related versions | (to come)
 
