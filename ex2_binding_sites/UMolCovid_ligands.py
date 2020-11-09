@@ -3,6 +3,7 @@ Screen.SetResolution(1920, 1080, False)
 
 #Useful when recording a long video
 Application.runInBackground = True
+UnityMolMain.allowIDLE = False
 
 bg_color("gray")
 #Avoid pre-computing surfaces for memory and perf purpose
@@ -70,5 +71,5 @@ def renderVideo(path):
     Application.OpenURL(path)#Open the recorded video
 
 
-APIPython.pythonConsole.doCoroutine(renderVideo("C:/Users/Xavier/Desktop/CovidTestUMol.mp4"))
+APIPython.pythonConsole.doCoroutine(renderVideo("C:/Users/ME/Desktop/CovidFAIRUMol_ex2.mp4"))
 

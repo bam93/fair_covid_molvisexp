@@ -4,10 +4,13 @@
 # UnityMol python script to visualize the Covid-19 spike protein
 
 # activate specific commands to simplify interactive raytracing of the scene
-doRT = False;
+doRT = False
+
+inVR = UnityMolMain.inVR()
 
 #Useful when recording a long video
 Application.runInBackground = True
+UnityMolMain.allowIDLE = False
 
 if(doRT):
     bg_color("gray")
@@ -36,14 +39,14 @@ clearAnnotations()
 annotationStatus = False
 setMouseMoveSpeed(5)
 
-load("6cs2.pdb")
-#fetch(PDBId="6cs2", usemmCIF=True, readHetm=True, forceDSSP=False, showDefaultRep=True, modelsAsTraj=True, center=False)
-setMolParentTransform( Vector3(-1.1592, 1.0424, -0.2460), Vector3(0.0064, 0.0064, 0.0064), Vector3(87.2821, 97.7300, 270.5491), Vector3(0.0000, 0.0000, -1.5500), False )
+load("fair_covid/ex1_spike/6cs2.pdb", center=False)
+
+if not inVR:
+    setMolParentTransform( Vector3(-1.1592, 1.0424, -0.2460), Vector3(0.0064, 0.0064, 0.0064), Vector3(87.2821, 97.7300, 270.5491), Vector3(0.0000, 0.0000, -1.5500), False )
+else:
+    centerOnSelection("6cs2_protein_or_nucleic")
+
 setTransparentCartoon("6cs2_protein_or_nucleic", 0.25)
-
-##cd("/Users/baaden/ownCloud/fair_covid/ex1_spike")
-##cd("/Users/baaden/OneDrive/xavier/")
-
 
 # show surfaces
 #showSelection("6cs2_protein_or_nucleic", "s")
@@ -68,7 +71,7 @@ enableOutline()
 # helper function to reset and reload after the script has been modified
 def restart():
     reset()
-    loadScript("spike1.py")
+    loadScript("fair_covid/ex1_spike/spike1.py")
 
 # helper function to toggle a selname/reptype from hidden to visible and vice versa
 def toggleRep(repName,repType):
@@ -129,7 +132,6 @@ def rep1():
     setHyperBallMetaphore("B.S1", "vdw", True)
     colorSelection("B.S1", "hb", bleu2)
     setRepSize("B.S1", "hb", 3.01)
-    return;
 
 def rep1bis():
     print("Representation of the overall ectodomain")
@@ -165,7 +167,6 @@ def rep1bis():
     select("6cs2 and chain B and resid 14:667", "B.S1", True, True, True, True, False, False, True)
     showSelection("B.S1", "s")
     colorSelection("B.S1", "s", bleu2)
-    return;
 
 def rep1off():
     hideSelection("A.S1")
@@ -181,11 +182,9 @@ def rep1off():
 def view1():
     #setStructurePositionRotation("6cs2", Vector3(0.0000, 0.0000, 0.0000), Vector3(0.0000, 0.0000, 0.0000))
     setMolParentTransform( Vector3(-1.1592, 1.0424, -0.2460), Vector3(0.0064, 0.0064, 0.0064), Vector3(87.2821, 97.7300, 270.5491), Vector3(0.0000, 0.0000, -1.5500) )
-    return;
 
 def view1b():
     setMolParentTransform( Vector3(-1.0644, 0.9179, -3.0181), Vector3(0.0064, 0.0064, 0.0064), Vector3(345.6059, 355.2745, 176.1258), Vector3(0.0000, 0.0000, -1.5500) )
-    return;
 
 def reprt():
     #setRTMaterialType("FP2", "cartoon", 7)
@@ -217,8 +216,8 @@ def annot1(mode=1):
     clearAnnotations()
     if mode==0 or (mode==-1 and annotationStatus):
         annotationStatus = False
-        return;
-    s=last()
+        return
+    s = last()
     # add annotations >>> -1 bug workaround temporary <<<
     #annotateAtomText("6cs2", 26768, "<size=30>Glycosylated chains\n are shown in yellow</size>")
     #
@@ -275,7 +274,6 @@ def view2():
     setMolParentTransform( Vector3(-0.6251, 0.9782, -0.9723), Vector3(0.0064, 0.0064, 0.0064), Vector3(47.6491, 92.7963, 225.2679), Vector3(-0.0250, 0.0062, -2.8030) )#centerOnSelection("FP2", True, -1.0000)
     #setStructurePositionRotation("6cs2", Vector3(5.9304, 0.0000, 7.0238), Vector3(0.0000, 358.0000, 0.0000))
     #setMolParentTransform( Vector3(1.0390, 1.1267, -1.6719), Vector3(0.0064, 0.0064, 0.0064), Vector3(86.7802, 232.0620, 326.2160), Vector3(0.0000, -0.0001, -2.8085) )
-    return;
 
 #view1()
 #ex1()
@@ -285,7 +283,6 @@ def rtstartup():
     while RaytracerManager.Instance.getRTFrameId() < 2: #Wait for enough RT sampling
         yield APIPython.pythonConsole.waitFrames(1)
     #RaytracerManager.Instance.forceDenoiserOff(True)
-    return;
 
 def screenshotloop():
     counter=1
@@ -294,7 +291,7 @@ def screenshotloop():
     reprt()
     yield APIPython.pythonConsole.waitSeconds(5)
     while(True):
-        screenshot("/Users/baaden/ownCloud/fair_covid/ex1_spike/rtshot"+str(counter)+".png",1900,1080)
+        screenshot("/Users/ME/fair_covid/ex1_spike/rtshot"+str(counter)+".png",1900,1080)
         yield APIPython.pythonConsole.waitSeconds(5)
         counter += 1
 

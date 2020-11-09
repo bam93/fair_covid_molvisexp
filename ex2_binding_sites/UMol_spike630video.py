@@ -1,6 +1,9 @@
 
 Application.runInBackground = True
 UnityMolMain.disableSurfaceThread = True
+UnityMolMain.allowIDLE = False
+
+inVR = UnityMolMain.inVR()
 
 bleu1 = ColorUtility.TryParseHtmlString("#6baed6")[1]
 bleu2 = ColorUtility.TryParseHtmlString("#3182bd")[1]
@@ -86,7 +89,10 @@ def animation():
 
 
 load("fair_covid/ex1_spike/6cs2.pdb")
-
 enableOutline()
 
-APIPython.pythonConsole.doCoroutine(animation())
+if inVR:
+    rep1()
+    centerOnSelection("6cs2_protein_or_nucleic")
+else:
+    APIPython.pythonConsole.doCoroutine(animation())

@@ -10,6 +10,7 @@ inVR = UnityMolMain.inVR()
 
 #Useful when recording a long video
 Application.runInBackground = True
+UnityMolMain.allowIDLE = False
 
 if(doRT):
     bg_color("gray")
