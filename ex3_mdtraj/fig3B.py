@@ -3,6 +3,8 @@ setMouseMoveSpeed(5.000)
 bg_color("white")
 UnityMolMain.disableSurfaceThread = True
 
+inVR = UnityMolMain.inVR()
+
 load(filePath="fair_covid/ex3_mdtraj/bp151.pdb", readHetm=True, forceDSSP=False, showDefaultRep=False, center=False, modelsAsTraj=True, forceStructureType=-1)
 loadTraj("bp151", "fair_covid/ex3_mdtraj/bp151.xtc")
 
@@ -47,17 +49,20 @@ clearSelections()
 enableOutline()
 setOutlineThickness(2.0)
 
-enableDepthCueing()
-setDepthCueingDensity(0.38)
-setDepthCueingStart(-5.70)
+if not inVR:
+    enableDepthCueing()
+    setDepthCueingDensity(0.38)
+    setDepthCueingStart(-5.70)
+    enableDOF()
+    setDOFFocusDistance(0.747)
+    setDOFAperture(10.0)
+    setDOFFocalLength(75)
 
-enableDOF()
-setDOFFocusDistance(0.747)
-setDOFAperture(10.0)
-setDOFFocalLength(75)
-
-setStructurePositionRotation("bp151", Vector3(0.0000, 0.0000, 0.0000), Vector3(0.0000, 0.0000, 0.0000))
-#Save parent position
-setMolParentTransform( Vector3(0.0979, -0.0452, -2.1001), Vector3(0.0131, 0.0131, 0.0131), Vector3(325.9454, 225.7427, 342.7948), Vector3(0.0975, -0.0450, -2.1000), lerp=False)
+if inVR:
+    centerOnStructure("bp151")
+else:
+    setStructurePositionRotation("bp151", Vector3(0.0000, 0.0000, 0.0000), Vector3(0.0000, 0.0000, 0.0000))
+    #Save parent position
+    setMolParentTransform( Vector3(0.0979, -0.0452, -2.1001), Vector3(0.0131, 0.0131, 0.0131), Vector3(325.9454, 225.7427, 342.7948), Vector3(0.0975, -0.0450, -2.1000), lerp=False)
 
 screenshot("fair_covid/ex3_mdtraj/Figure3B.png", 1920, 1080)
