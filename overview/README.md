@@ -19,6 +19,7 @@ Image | Screen captures illustrating molecular 3D model sharing through Sketchfa
 Image | Screen captures illustrating example 4 (bioinformatics data mapping on a 3D structure) | [![DOI](https://zenodo.org/badge/DOI/10.6084/m9.figshare.12894077.svg)](https://doi.org/10.6084/m9.figshare.12894077)
 Movie | Animation of drug molecules binding to Covid-19 main protease | [![DOI](https://zenodo.org/badge/DOI/10.6084/m9.figshare.12860069.svg)](https://doi.org/10.6084/m9.figshare.12860069)
 Movie | Tutorial on annotations | [![DOI](https://zenodo.org/badge/DOI/10.6084/m9.figshare.13385957.svg)](https://doi.org/10.6084/m9.figshare.13385957)
+Movie | Tutorial on tour functionality | [![DOI](https://zenodo.org/badge/DOI/10.6084/m9.figshare.13386374.svg)](https://doi.org/10.6084/m9.figshare.13386374)
 360 Movie | UnityMol 360 degree video with a camera path through the COVID19 spike protein-ACE2 complex | [![DOI](https://zenodo.org/badge/DOI/10.6084/m9.figshare.12894038.svg)](https://doi.org/10.6084/m9.figshare.12894038) [youtube](https://www.youtube.com/watch?v=hFaPaypm6DI)
 3D movie | to come | to come
 
