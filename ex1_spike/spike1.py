@@ -171,6 +171,7 @@ def rep1bis():
     select("6cs2 and chain B and resid 14:667", "B.S1", True, True, True, True, False, False, True)
     showSelection("B.S1", "s")
     colorSelection("B.S1", "s", bleu2)
+    clearSelections()
 
 def rep1off():
     hideSelection("A.S1")
@@ -283,6 +284,7 @@ def rep2():
     setMetal("FP2", "c", 0.26)
     setSmoothness("FP2", "c", 1.00)
     setTubeSizeCartoon("FP2", 2.02)
+    clearSelections()
 
 def rep2off():
     hideSelection("FP2")
@@ -293,6 +295,7 @@ def view2():
     setMolParentTransform( Vector3(-0.6251, 0.9782, -0.9723), Vector3(0.0064, 0.0064, 0.0064), Vector3(47.6491, 92.7963, 225.2679), Vector3(-0.0250, 0.0062, -2.8030) )#centerOnSelection("FP2", True, -1.0000)
     #setStructurePositionRotation("6cs2", Vector3(5.9304, 0.0000, 7.0238), Vector3(0.0000, 358.0000, 0.0000))
     #setMolParentTransform( Vector3(1.0390, 1.1267, -1.6719), Vector3(0.0064, 0.0064, 0.0064), Vector3(86.7802, 232.0620, 326.2160), Vector3(0.0000, -0.0001, -2.8085) )
+    clearSelections()
 
 #view1()
 #ex1()

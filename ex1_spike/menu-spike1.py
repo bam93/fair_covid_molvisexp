@@ -1,8 +1,19 @@
+#!/usr/bin/env python3
+
+# Python to be run outside of UnityMol
+# Make sure to install zmq package: "pip3 install zmq"
+# Then run UnityMol and type "activateExternalCommands()" in the console if you run UnityMol 1.1.3 or more recent versions
+# Finally start this script with "python3 menu-spike1.py"
+# Make sure the absolute path variable is set correctly
+
 import struct
 import socket
 import tkinter as tk
-from functools import partial
 import zmq
+from functools import partial
+
+
+absolutePath = "C:/Users/ME/fair_covid_molvisexp/ex1_spike/"
 
 
 class UMolCommand:
@@ -69,13 +80,9 @@ class Application(tk.Frame):
 
     def loadFirst(self):
         self.u.send("Application.runInBackground = True")
-        
-        #self.u.send("loadScript('../baaden/ownCloud/fair_covid/ex1_spike/spike1.py')")
-        self.u.send("print('Hello, I am connected!')")
-        #self.u.send("fetch('1kx2')")
+        self.u.send("UnityMolMain.allowIDLE = False")
 
-        #sels = self.u.send("getSelectionListString()")
-        # self.selections = []
+        self.u.send("loadScript('"+absolutePath+"spike1.py')")
 
         for i in self.povButtons:
             i.destroy()
@@ -148,20 +155,6 @@ class Application(tk.Frame):
 
         self.pack()
 
-        # if sels and len(sels) > 0:
-        #     tmp = sels.replace("[","").replace("]","").split(", ")
-        #     self.selections = [i for i in tmp if len(i.strip()) != 0]
-
-
-        # self.selectionButtons = []
-        # curid = 0
-        # for i in self.selections:
-        #     butto = tk.Button(self)
-        #     butto["text"] = i
-        #     self.selectionButtons.append(butto)
-        #     butto.pack(side="top")
-        #     butto["command"] = partial(self.printMe, curid)
-        #     curid+=1
 
     def sendPOV(self, idPov):
         if idPov == 0:
@@ -180,24 +173,8 @@ class Application(tk.Frame):
             self.u.send("rep2()")
             self.u.send("view2()")
 
-    # def printMe(self, b):
-    #     selName = self.selections[b]
-    #     shown = self.u.send("areRepresentationsOn('"+selName+"', 'hb')")
-    #     print(shown)
-    #     if len(shown) > 0:
-    #         shown = shown == "True"
-    #     else:
-    #         shown = True
-    #     if not shown:
-    #         command = "showSelection('"+selName+"', 'hb')"
-    #     else:
-    #         command = "hideSelection('"+selName+"', 'hb')"
-
-    #     res = self.u.send(command)
-
 root = tk.Tk()
 app = Application(master=root)
 app.mainloop()
 app.u.disconnect()
 root.destroy()
-
