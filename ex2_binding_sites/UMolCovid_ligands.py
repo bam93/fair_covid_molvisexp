@@ -1,6 +1,8 @@
 #Set screen resolution, mandatory for recording in raytracing mode
 Screen.SetResolution(1920, 1080, False)
 
+outputFolder = "C:/Users/ME/Desktop/"
+
 #Useful when recording a long video
 Application.runInBackground = True
 UnityMolMain.allowIDLE = False
@@ -71,5 +73,5 @@ def renderVideo(path):
     Application.OpenURL(path)#Open the recorded video
 
 
-APIPython.pythonConsole.doCoroutine(renderVideo("C:/Users/ME/Desktop/CovidFAIRUMol_ex2.mp4"))
+APIPython.pythonConsole.doCoroutine(renderVideo(outputFolder+"CovidFAIRUMol_ex2.mp4"))
 

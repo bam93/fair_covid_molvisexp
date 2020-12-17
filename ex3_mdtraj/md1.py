@@ -6,6 +6,8 @@
 # activate specific commands to simplify interactive raytracing of the scene
 doRT = False;
 
+absolutePath = "C:/Users/ME/fair_covid_molvisexp/ex3_mdtraj/"
+
 inVR = UnityMolMain.inVR()
 
 #Useful when recording a long video
@@ -39,8 +41,9 @@ clearAnnotations()
 annotationStatus = False
 setMouseMoveSpeed(5)
 
-load("bp151.pdb")
-loadTraj("bp151", "bp151.xtc")
+s = load(absolutePath+"bp151.pdb")
+loadTraj("bp151", absolutePath+"bp151.xtc")
+s.trajPlayer.smoothing = True
 
 if inVR:
     centerOnStructure("bp151")
@@ -72,7 +75,7 @@ setHyperBallMetaphore("bp151_not_protein_nucleic", "Licorice", True)
 # helper function to reset and reload after the script has been modified
 def restart():
     reset()
-    loadScript("md1.py")
+    loadScript(absolutePath+"md1.py")
 
 # helper function to toggle a selname/reptype from hidden to visible and vice versa
 def toggleRep(repName,repType):
