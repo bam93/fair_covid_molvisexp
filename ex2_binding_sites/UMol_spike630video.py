@@ -3,6 +3,9 @@ Application.runInBackground = True
 UnityMolMain.disableSurfaceThread = True
 UnityMolMain.allowIDLE = False
 
+absolutePath = "C:/Users/ME/fair_covid_molvisexp/ex1_spike/"
+
+
 inVR = UnityMolMain.inVR()
 
 bleu1 = ColorUtility.TryParseHtmlString("#6baed6")[1]
@@ -88,7 +91,7 @@ def animation():
     setMolParentTransform( Vector3(-1.1606, 1.2043, -2.7047), Vector3(0.0064, 0.0064, 0.0064), Vector3(0.0419, 357.5057, 177.4474), Vector3(0.0000, 0.0000, -1.5500), duration=5.0)
 
 
-load("fair_covid/ex1_spike/6cs2.pdb")
+load(absolutePath+"6cs2.pdb")
 enableOutline()
 
 if inVR:
