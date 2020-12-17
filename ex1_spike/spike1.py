@@ -3,6 +3,8 @@
 #
 # UnityMol python script to visualize the Covid-19 spike protein
 
+absolutePath = "C:/Users/ME/fair_covid_molvisexp/ex1_spike/"
+
 # activate specific commands to simplify interactive raytracing of the scene
 doRT = False
 
@@ -39,7 +41,7 @@ clearAnnotations()
 annotationStatus = False
 setMouseMoveSpeed(5)
 
-load("fair_covid/ex1_spike/6cs2.pdb", center=False)
+load(absolutePath+"6cs2.pdb", center=False)
 
 if not inVR:
     setMolParentTransform( Vector3(-1.1592, 1.0424, -0.2460), Vector3(0.0064, 0.0064, 0.0064), Vector3(87.2821, 97.7300, 270.5491), Vector3(0.0000, 0.0000, -1.5500), False )
@@ -71,7 +73,7 @@ enableOutline()
 # helper function to reset and reload after the script has been modified
 def restart():
     reset()
-    loadScript("fair_covid/ex1_spike/spike1.py")
+    loadScript(absolutePath+"spike1.py")
 
 # helper function to toggle a selname/reptype from hidden to visible and vice versa
 def toggleRep(repName,repType):
@@ -132,6 +134,8 @@ def rep1():
     setHyperBallMetaphore("B.S1", "vdw", True)
     colorSelection("B.S1", "hb", bleu2)
     setRepSize("B.S1", "hb", 3.01)
+
+    clearSelections()
 
 def rep1bis():
     print("Representation of the overall ectodomain")
@@ -218,36 +222,51 @@ def annot1(mode=1):
         annotationStatus = False
         return
     s = last()
-    # add annotations >>> -1 bug workaround temporary <<<
-    #annotateAtomText("6cs2", 26768, "<size=30>Glycosylated chains\n are shown in yellow</size>")
-    #
-    # structure.currentModel.getAtomWithID() to get access to a specific atom
-    # GLYCOSYLATION
-    apos = s.currentModel.getAtomWithID(26768).position + Vector3(0.0, 0.0, -10.0)
-    annotateWorldText(apos, 0.3, "<b>Glycosylated chains</b>\n on spike surface", RGBA(1, 1, 0, 1))
-    # RED CHAIN
-    apos = s.currentModel.getAtomWithID(1236).position + Vector3(-10.0, 0.0, -10.0)
-    annotateWorldText(apos, 0.3, "<b>Spike S1</b>\nDown conformation", bleu1)
-    # BLUE CHAIN
-    apos = s.currentModel.getAtomWithID(6928).position + Vector3(15.0, 0.0, 0.0)
-    annotateWorldText(apos, 0.3, "<b>Spike S1</b>\nUp conformation", bleu2)
-    # PINK CHAIN
-    apos = s.currentModel.getAtomWithID(16337).position + Vector3(15.0, 0.0, 0.0)
-    annotateWorldText(apos, 0.3, "<b>Spike S1</b>\nDown conformation", bleu3)
-    # PURPLE CHAIN
-    apos = s.currentModel.getAtomWithID(24449).position + Vector3(15.0, 0.0, 0.0)
-    annotateWorldText(apos, 0.3, "<b>ACE 2\nreceptor</b>", oran1)
-    # sel.centerOfGravity or structure.currentModel.centerOfGravity to get centroid
-    apos = s.currentModel.centroid + Vector3(0.0, 0.0, -100.0)
-    annotateWorldText(apos, 0.3, "SARS Spike Glycoprotein - human ACE2 complex", RGBA(1.0, 1.0, 1.0, 1.0))
-    apos = s.currentModel.getAtomWithID(22239).position + Vector3(0.0, 0.0, 10.0)
-    annotateWorldText(apos, 0.3, "<b>Spike S2 regions</b>", vert2)
-    # Some distances to annotate
-    #annotateLine("6cs2", 1236, "6cs2", 26768)
-    #removeAnnotationLine("6cs2", 1236, "6cs2", 26768)
-    #p1 = s.currentModel.getAtomWithID(1236).position
-    #p2 = s.currentModel.getAtomWithID(26768).position
-    #annotateWorldLine(p1, p2, 0.03, RGBA(1.0, 1.0, 0.0, 1.0))
+    if hasattr(UnityMolMain, "iversion"):#introduced in 1.1.3
+        # GLYCOSYLATION
+        annotateAtomText(s.name, 26768, "<b>Glycosylated chains</b>\n on spike surface", Color.yellow)
+        # RED CHAIN
+        annotateAtomText(s.name, 1236, "<b>Spike S1</b>\nDown conformation", bleu1)
+        # BLUE CHAIN
+        annotateAtomText(s.name, 6928, "<b>Spike S1</b>\nUp conformation", bleu2)
+        # PINK CHAIN
+        annotateAtomText(s.name, 16337, "<b>Spike S1</b>\nDown conformation", bleu3)
+        # PURPLE CHAIN
+        annotateAtomText(s.name, 24449, "<b>ACE 2\nreceptor</b>", oran1)
+
+        annotateAtomText(s.name, 10449, "SARS Spike Glycoprotein - human ACE2 complex", Color.white)
+        annotateAtomText(s.name, 22239, "<b>Spike S2 regions</b>", vert2)
+    else:
+        # add annotations >>> -1 bug workaround temporary <<<
+        #annotateAtomText("6cs2", 26768, "<size=30>Glycosylated chains\n are shown in yellow</size>")
+        #
+        # structure.currentModel.getAtomWithID() to get access to a specific atom
+        # GLYCOSYLATION
+        apos = s.currentModel.getAtomWithID(26768).position + Vector3(0.0, 0.0, -10.0)
+        annotateWorldText(apos, 0.3, "<b>Glycosylated chains</b>\n on spike surface", RGBA(1, 1, 0, 1))
+        # RED CHAIN
+        apos = s.currentModel.getAtomWithID(1236).position + Vector3(-10.0, 0.0, -10.0)
+        annotateWorldText(apos, 0.3, "<b>Spike S1</b>\nDown conformation", bleu1)
+        # BLUE CHAIN
+        apos = s.currentModel.getAtomWithID(6928).position + Vector3(15.0, 0.0, 0.0)
+        annotateWorldText(apos, 0.3, "<b>Spike S1</b>\nUp conformation", bleu2)
+        # PINK CHAIN
+        apos = s.currentModel.getAtomWithID(16337).position + Vector3(15.0, 0.0, 0.0)
+        annotateWorldText(apos, 0.3, "<b>Spike S1</b>\nDown conformation", bleu3)
+        # PURPLE CHAIN
+        apos = s.currentModel.getAtomWithID(24449).position + Vector3(15.0, 0.0, 0.0)
+        annotateWorldText(apos, 0.3, "<b>ACE 2\nreceptor</b>", oran1)
+        # sel.centerOfGravity or structure.currentModel.centerOfGravity to get centroid
+        apos = s.currentModel.centroid + Vector3(0.0, 0.0, -100.0)
+        annotateWorldText(apos, 0.3, "SARS Spike Glycoprotein - human ACE2 complex", RGBA(1.0, 1.0, 1.0, 1.0))
+        apos = s.currentModel.getAtomWithID(22239).position + Vector3(0.0, 0.0, 10.0)
+        annotateWorldText(apos, 0.3, "<b>Spike S2 regions</b>", vert2)
+        # Some distances to annotate
+        #annotateLine("6cs2", 1236, "6cs2", 26768)
+        #removeAnnotationLine("6cs2", 1236, "6cs2", 26768)
+        #p1 = s.currentModel.getAtomWithID(1236).position
+        #p2 = s.currentModel.getAtomWithID(26768).position
+        #annotateWorldLine(p1, p2, 0.03, RGBA(1.0, 1.0, 0.0, 1.0))
     annotationStatus = True
 
 
@@ -291,7 +310,7 @@ def screenshotloop():
     reprt()
     yield APIPython.pythonConsole.waitSeconds(5)
     while(True):
-        screenshot("/Users/ME/fair_covid/ex1_spike/rtshot"+str(counter)+".png",1900,1080)
+        screenshot(absolutePath+"rtshot"+str(counter)+".png",1900,1080)
         yield APIPython.pythonConsole.waitSeconds(5)
         counter += 1
 
