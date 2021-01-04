@@ -193,14 +193,14 @@ def view1b():
 
 def doTour():
     clearTour()
-    addSelectionToTour("A.S1")
+    mm = getManipulationManager()
+    addSelectionToTour("A.S1")#Equivalent to 'mm.addTour(selM.selections["A.S1"])'
     addSelectionToTour("A.S2")
     addSelectionToTour("B.S1")
     addSelectionToTour("B.S2")
     addSelectionToTour("C.S1")
     addSelectionToTour("C.S2")
     addSelectionToTour("D.ACE")
-    mm = getManipulationManager()
     mm.resetTour()# Reset the tour to the first selection
     mm.startTour(2.0, 0.75)# Start the tour animation, stop 2 seconds on each selection and transition time is 0.75 seconds
 
