@@ -192,6 +192,7 @@ def view1b():
     setMolParentTransform( Vector3(-1.0644, 0.9179, -3.0181), Vector3(0.0064, 0.0064, 0.0064), Vector3(345.6059, 355.2745, 176.1258), Vector3(0.0000, 0.0000, -1.5500) )
 
 def doTour():
+    rep1()
     clearTour()
     mm = getManipulationManager()
     addSelectionToTour("A.S1")#Equivalent to 'mm.addTour(selM.selections["A.S1"])'
