@@ -191,6 +191,19 @@ def view1():
 def view1b():
     setMolParentTransform( Vector3(-1.0644, 0.9179, -3.0181), Vector3(0.0064, 0.0064, 0.0064), Vector3(345.6059, 355.2745, 176.1258), Vector3(0.0000, 0.0000, -1.5500) )
 
+def doTour():
+    clearTour()
+    addSelectionToTour("A.S1")
+    addSelectionToTour("A.S2")
+    addSelectionToTour("B.S1")
+    addSelectionToTour("B.S2")
+    addSelectionToTour("C.S1")
+    addSelectionToTour("C.S2")
+    addSelectionToTour("D.ACE")
+    mm = getManipulationManager()
+    mm.resetTour()# Reset the tour to the first selection
+    mm.startTour(2.0, 0.75)# Start the tour animation, stop 2 seconds on each selection and transition time is 0.75 seconds
+
 def reprt():
     #setRTMaterialType("FP2", "cartoon", 7)
     setRTMaterial("D.ACE", "hb", "plastic")
