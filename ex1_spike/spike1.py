@@ -3,7 +3,7 @@
 #
 # UnityMol python script to visualize the Covid-19 spike protein
 
-absolutePath = "C:/Users/ME/fair_covid_molvisexp/ex1_spike/"
+absolutePath = "C:/Users/Me/fair_covid_molvisexp/ex1_spike/"
 
 # activate specific commands to simplify interactive raytracing of the scene
 doRT = False
@@ -204,6 +204,28 @@ def doTour():
     addSelectionToTour("D.ACE")
     mm.resetTour()# Reset the tour to the first selection
     mm.startTour(2.0, 0.75)# Start the tour animation, stop 2 seconds on each selection and transition time is 0.75 seconds
+
+def loadEMMap():
+    rep1off()
+    hideSelection("D.ACE")
+    hideSelection("6cs2_protein_or_nucleic", "c")
+    loadDXmap(last().name, absolutePath+"6CS2_chainD_3A_EM.dx")#Load the EM map
+    select("6cs2 and chain D", "D.ACE_iso", True, True, True, True, False, False, True)
+    showSelection("D.ACE_iso", "dxiso", "6cs2")#Create the iso surface
+    showSelection("D.ACE_iso", "c")#Create the iso surface
+    colorSelection("D.ACE_iso", "c", Color.white)
+    updateDXIso("D.ACE_iso", 0.012)#Default value does not show anything but 0.012 is a "good" level
+    setWireframeSurface("D.ACE_iso")#show as a wireframe surface
+    setSurfaceWireframe("D.ACE_iso", "dxiso", 0.02)#set the size of the wireframe
+    colorSelection("D.ACE_iso", "dxiso", Color.black)#color the map in black
+    last().dxr.hideLines()#hide bounding box of the EM map
+    clearSelection()
+    centerOnSelection("D.ACE_iso", True)
+
+def EMMapOff():
+    hideSelection("D.ACE_iso", "dxiso")
+    hideSelection("D.ACE_iso", "c")
+
 
 def reprt():
     #setRTMaterialType("FP2", "cartoon", 7)
