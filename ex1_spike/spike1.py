@@ -3,7 +3,7 @@
 #
 # UnityMol python script to visualize the Covid-19 spike protein
 
-absolutePath = "C:/Users/Me/fair_covid_molvisexp/ex1_spike/"
+absolutePath = "C:/Users/ME/fair_covid_molvisexp/ex1_spike/"
 
 # activate specific commands to simplify interactive raytracing of the scene
 doRT = False
@@ -219,7 +219,7 @@ def loadEMMap():
     setSurfaceWireframe("D.ACE_iso", "dxiso", 0.02)#set the size of the wireframe
     colorSelection("D.ACE_iso", "dxiso", Color.black)#color the map in black
     last().dxr.hideLines()#hide bounding box of the EM map
-    clearSelection()
+    clearSelections()
     centerOnSelection("D.ACE_iso", True)
 
 def EMMapOff():
