@@ -49,6 +49,7 @@ More executable builds to run the above scripts | (to come)
 Item  | Link 
 ------------- | ------------- 
 Preprint of the paper underlying this repository available from biorxiv| [![DOI](https://zenodo.org/badge/DOI/10.1101/2020.08.27.270140.svg)](https://doi.org/10.1101/2020.08.27.270140)
+Practical UnityMol Tutorial updated for this work| [![DOI](https://zenodo.org/badge/DOI/10.6084/m9.figshare.13643309.v1.svg)](https://doi.org/10.6084/m9.figshare.13643309)
 Documentation on how to create the various media and models above with UnityMol | (to come once the code is stabilized)
 
 ## License
