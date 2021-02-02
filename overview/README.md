@@ -22,7 +22,8 @@ Movie | Animation of drug molecules binding to Covid-19 main protease | [![DOI](
 Movie | Tutorial on annotations | [![DOI](https://zenodo.org/badge/DOI/10.6084/m9.figshare.13385957.svg)](https://doi.org/10.6084/m9.figshare.13385957)
 Movie | Tutorial on tour functionality | [![DOI](https://zenodo.org/badge/DOI/10.6084/m9.figshare.13386374.svg)](https://doi.org/10.6084/m9.figshare.13386374)
 360 Movie | UnityMol 360 degree video with a camera path through the COVID19 spike protein-ACE2 complex | [![DOI](https://zenodo.org/badge/DOI/10.6084/m9.figshare.12894038.svg)](https://doi.org/10.6084/m9.figshare.12894038) [youtube](https://www.youtube.com/watch?v=hFaPaypm6DI)
-3D movie | to come | to come
+Movie | UnityMol tutorial video on generating 360 degree videos | [![DOI](https://zenodo.org/badge/DOI/10.6084/m9.figshare.13664375.v1.svg)](https://doi.org/10.6084/m9.figshare.13664375)
+Movie | UnityMol tutorial video showing custom user-added menus | [![DOI](https://zenodo.org/badge/DOI/10.6084/m9.figshare.13664348.v1.svg)](https://doi.org/10.6084/m9.figshare.13664348.v1)
 
 ## Models
 
