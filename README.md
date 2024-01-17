@@ -2,7 +2,12 @@
 
 # FAIR sharing of molecular visualization experiences
 
-This is a data and code collection (`fair_covid_molvisexp`) for our publication available as preprint on [biorxiv](http://dx.doi.org/10.1101/2020.08.27.270140) experimenting with FAIR sharing of molecular visualization experiences. We initially provide four example scripts for the [UnityMol](http://unitymol.sourceforge.net) software as well as derived media such as images, movies and 3D models.
+This is a data and code collection (`fair_covid_molvisexp`) for our publication available initially as preprint on [biorxiv](http://dx.doi.org/10.1101/2020.08.27.270140) and now published in [Acta Crystallographica D](https://dx.doi.org/10.1107/S2059798321002941) experimenting with FAIR sharing of molecular visualization experiences. We initially provide four example scripts for the [UnityMol](http://unitymol.sourceforge.net) software as well as derived media such as images, movies and 3D models.
+
+Please cite the work as:
+Xavier Martinez, Marc Baaden. 
+UnityMol prototype for FAIR sharing of molecular visualization experiences: from pictures in the cloud to collaborative virtual reality exploration in immersive 3D environments. 
+Acta crystallographica Section D : Structural biology, 2021, 77 (6), pp.746-754.
 
 ## Contents
 
